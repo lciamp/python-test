@@ -1,4 +1,4 @@
-from unittest import TestCase, TestLoader, TextTestRunner
+from unittest import TestCase
 from blog import Blog
 
 
@@ -22,6 +22,3 @@ class BlogTest(TestCase):
         b2.posts = [1, 2]
         self.assertEqual('Test by Test Author (2 posts)', b2.__repr__())
 
-
-suite = TestLoader().loadTestsFromTestCase(BlogTest)
-testResult = TextTestRunner(verbosity=2).run(suite)

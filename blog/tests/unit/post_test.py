@@ -1,4 +1,4 @@
-from unittest import TestCase, TestLoader, TextTestRunner
+from unittest import TestCase
 from post import Post
 
 
@@ -18,6 +18,3 @@ class PostTest(TestCase):
         }
         self.assertDictEqual(expected, p.json())
 
-
-suite = TestLoader().loadTestsFromTestCase(PostTest)
-testResult = TextTestRunner(verbosity=2).run(suite)
